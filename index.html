@@ -1,58 +1,295 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Décors</title>
+    <style>
+        .legendes {
+            background-color: rgba(100, 100, 100, 100);
+        }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        .rose {
+            background: pink;
+        }
 
-    <title>Hello, world!</title>
+        .bleu {
+            background: royalblue;
+        }
+
+        .jaune {
+            background: gold;
+        }
+
+        .vert {
+            background: khaki;
+        }
+    </style>
+    <!-- bootstrap en local -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 </head>
-
 <body>
-    <div class="container-fluid">
-        <h1>Bonjour, le monde !</h1>
-
-        <div class="row">
-            <div class="col-sm">
-                <p>One of three columns</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt laborum repellendus quia unde beatae, dicta explicabo earum aliquid consequuntur deserunt ad ea error fugit corrupti facilis dolorum accusantium blanditiis hic?</p>
+    <!-- expand-lg : visible en pleine largeur -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- la div container contient le contenu de la nav et le container n'est pas "fluid" -->
+        <div class="container">
+            <a class="navbar-brand" href="#">Décors</a>
+            <!-- bouton burger -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">À la une</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Prix</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nos pages Bootstrap
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="page1.html">Page 1</a>
+                            <a class="dropdown-item" href="page2.html">Grille, exemples</a>
+                            <a class="dropdown-item" href="#">Page 3</a>
+                            <a class="dropdown-item" href="#">Page 4</a>
+                            <a class="dropdown-item" href="#">Page 5</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="col-sm">
-                <p>One of three columns</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt laborum repellendus quia unde beatae, dicta explicabo earum aliquid consequuntur deserunt ad ea error fugit corrupti facilis dolorum accusantium blanditiis hic?</p>
-            </div>
-            <div class="col-sm">
-                <p>One of three columns</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt laborum repellendus quia unde beatae, dicta explicabo earum aliquid consequuntur deserunt ad ea error fugit corrupti facilis dolorum accusantium blanditiis hic?</p>
-            </div>
+        <!-- fermeture div container -->
         </div>
-        
+    </nav>
+    <!-- Le 1er container avec notre carousel (diapo, slider...) -->
+    <div class="container mt-4">
         <div class="row">
-            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ducimus nostrum, molestias, velit suscipit ullam culpa voluptate nihil ipsa reprehenderit praesentium numquam aspernatur pariatur commodi illo qui sed est debitis?</div>
-            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ducimus nostrum, molestias, velit suscipit ullam culpa voluptate nihil ipsa reprehenderit praesentium numquam aspernatur pariatur commodi illo qui sed est debitis?</div>
-            <div class="w-100"></div>
-            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ducimus nostrum, molestias, velit suscipit ullam culpa voluptate nihil ipsa reprehenderit praesentium numquam aspernatur pariatur commodi illo qui sed est debitis?</div>
-            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ducimus nostrum, molestias, velit suscipit ullam culpa voluptate nihil ipsa reprehenderit praesentium numquam aspernatur pariatur commodi illo qui sed est debitis?</div>
+            <div class="col-12">
+                <!-- le carousel -->
+                <div id="monCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- les indicateurs -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#monCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#monCarousel" data-slide-to="1"></li>
+                        <li data-target="#monCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="2000">
+                            <img src="img/liana.jpg" class="d-block w-100" alt="...">
+                            <!-- légendes du carousel -->
+                            <div class="carousel-caption d-none d-md-block legendes">
+                                <h5>Décor 1</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-interval="2000">
+                            <img src="img/immeuble.jpg" class="d-block w-100" alt="...">
+                            <!-- légendes du carousel -->
+                            <div class="carousel-caption d-none d-md-block bg-light text-dark">
+                                <h5>Décor 2</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-interval="2000">
+                            <img src="img/simone.jpg" class="d-block w-100" alt="...">
+                            <!-- légendes du carousel -->
+                            <div class="carousel-caption d-none d-md-block bg-light text-dark">
+                                <h5>Décor 3</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Flèches de contrôle du carousel -->
+                    <a class="carousel-control-prev" href="#monCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Précédente</span>
+                    </a>
+                    <a class="carousel-control-next" href="#monCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Suivante</span>
+                    </a>
+                <!-- fermeture div id carousel -->
+                </div>
+            <!-- fermeture col-12 -->
+            </div>
+        <!-- fermeture row -->
         </div>
-        
+        <hr>
+    <!-- fermeture container du slider -->
     </div>
+    <!-- Le 2nd container -->
+    <div class="container">
+        <div class="row">
+            <!-- col-sm, pour empiler les colonnes sur smartphone -->
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-2 col-lg-4">
+                        <img src="img/40X40.gif" alt="image ronde" class="rounded-circle">
+                    </div>
+                    <div class="col-10 col-lg-8">
+                        <h5>Nos motifs</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-2 col-lg-4">
+                        <img src="img/40X40.gif" alt="image ronde" class="rounded-circle">
+                    </div>
+                    <div class="col-10 col-lg-8">
+                        <h5>Nos produits</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-2 col-lg-4">
+                        <img src="img/40X40.gif" alt="image ronde" class="rounded-circle">
+                    </div>
+                    <div class="col-10 col-lg-8">
+                        <h5>Nos promos</h5>
+                    </div>
+                </div>
+            </div>
+        <!-- fermeture row -->
+        </div>
+        <hr>
+    <!-- fermeture 2ème container -->
+    </div>
+    <!-- 3ème container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <h2 class="text-center">À la une aujourd'hui</h2>
+                <hr>
+            </div>
+        <!-- fermeture row -->
+        </div>
+    <!-- fermeture 3ème container -->
+    </div>
+    <!-- 4ème container -->
+    <div class="container">
+        <!-- pb-4, voir spacing -->
+        <div class="row p-4">
+            <div class="col-md-4 pb-1">
+                <div class="card">
+                    <img src="img/img1.jpg" alt="escalier" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">5 sortes de médias</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">très petits : smartphones en mode portrait (- de 576px),</li>
+                            <li class="list-group-item">petits : smartphones en mode paysage (+ de 576px mais - de 768px),</li>
+                            <li class="list-group-item">moyens : tablettes (+ de 768px mais - de 992px),</li>
+                            <li class="list-group-item">grands : (+ de 992px mais - de 1200px),</li>
+                            <li class="list-group-item">très grands : (+ de 1200px).</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                    </div>      
+                </div> <!-- fermeture card 1 -->  
+            </div> <!-- fermeture div 1 .col-md-4 -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/img2.jpg" alt="sacs" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Le nom des classes</h5>
+                        <ul>
+                            <li>rien pour les très petits écrans (valeur de référence)</li>
+                            <li>sm pour small,</li>
+                            <li>md pour medium,</li>
+                            <li>lg pour large,</li>
+                            <li>xl pour x-large.</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div> <!-- fermeture card 2 -->
+            </div> <!-- fermeture div 2 .col-md-4 -->
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div id="miniCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/img3.jpg" class="d-block w-100" alt="vert">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/img4.jpg" class="d-block w-100" alt="gouttes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/img1.jpg" class="d-block w-100" alt="escalier">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/img2.jpg" class="d-block w-100" alt="sac">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#miniCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Précédente</span>
+                        </a>
+                        <a class="carousel-control-next" href="#miniCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Suivante</span>
+                        </a>                  
+                    </div> <!-- fin carousel -->
+
+                    <div class="card-body">
+                        <h5 class="card-title">Les colonnes</h5>
+                        <ul>
+                            <li>Une colonne : col-1 ou col-sm-1 ou col-md-1 ou col-lg-1 ou col-xl-1</li>
+                            <li>Deux colonnes : col-2 ou col-sm-2 ou col-md-2 ou col-lg-2 ou col-xl-2</li>
+                            <li>…</li>
+                            <li>Douze colonnes : col-12 ou col-sm-12 ou col-md-12 ou col-lg-12 ou col-xl-12</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div> <!-- fermeture card 3 -->
+            </div> <!-- fermeture div 3 .col-md-4 -->
+        </div> <!-- fermeture row -->
+    </div> <!-- fermeture 4ème container -->
+
+    <!-- 5ème container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center">Produits à la une</h2>
+            </div>
+        </div> <!-- fermeture row -->
+        <hr>
+    </div> <!-- fermeture 5ème container -->
+
+    <!-- 6ème container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo excepturi ex officiis voluptas eos saepe. Nisi recusandae assumenda incidunt dignissimos sunt quasi, fugiat reiciendis quaerat, quidem dolores voluptatum id ab?
+            </div>
+            <div class="col-lg-4">Nesciunt, delectus tempora voluptate ullam quibusdam ducimus labore doloribus, hic deserunt incidunt ipsum sint maiores veritatis? Veritatis voluptates tempora animi, molestiae, molestias laborum dicta vero nostrum ullam nobis voluptatem est?
+            </div>
+            <div class="col-lg-4">Delectus commodi incidunt praesentium necessitatibus et obcaecati, repellendus illo modi dolor officiis corporis amet pariatur asperiores sunt placeat fuga quam provident debitis quisquam neque facere! At assumenda sequi voluptates omnis?
+            </div>
+        </div> <!-- fermeture row -->
+    </div> <!-- fermeture 6ème container -->
+
+
+
+    <!-- Scripts en local -->
+    <script src="js/jquery_v3.4.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Optional JavaScript en cdn-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS en cdn -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 </body>
-
 </html>
